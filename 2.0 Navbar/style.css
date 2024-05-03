@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style-type: none;
+
+
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://images.unsplash.com/photo-1712246360694-898e708bc1a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+header nav {
+    width: 100%;
+    padding: 10px 30px;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+#logo h1{
+    font-size: 40px;
+    color: white;
+}
+
+#logo span{
+    color: red;
+}
+
+#menu_icon{
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+nav .navlinks{
+    display: flex;
+    gap: 30px;
+
+}
+nav .navlinks li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .navlinks li:hover a{
+    color: red;
+}
+
+
+/* -------------For Responsive-------------- */
+
+@media (width<=600px) {
+    #menu_icon{
+        display: block;
+    }
+    header nav{
+        position: relative;
+        background-color: rgb(33,36,50);
+    }
+
+    nav .navlinks{
+        /* display: flex;
+        gap: 30px;
+        border: 2px solid blue; */
+        padding: 20px 0;
+        background-color: rgb(33,36,50);
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+
+        flex-direction: column;
+        text-align: center;
+
+        transition: 1s ease;
+    }
+
+}

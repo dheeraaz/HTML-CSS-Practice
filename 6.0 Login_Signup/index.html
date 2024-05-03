@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Register</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Remix CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <div class="form_box">
+            <div class="button_grp">
+                <div class="button_bg"></div>
+                <button class="top_btn" type="button" onclick="toLogin()">Log In</button>
+                <button class="top_btn" type="button" onclick="toRegister()">Register</button>
+            </div>
+            <div class="social_icons">
+                <i class="ri-facebook-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-google-fill"></i>
+            </div>
+            <div class="form_grp">
+                <form action="" class="input-grp login_forms">
+                    <input type="text" class="input_field" name="username" placeholder="User Name" required>
+                    <input type="password" class="input_field" name="password" placeholder="Enter Password" required>
+
+                    <div class="input_wrapper">
+                        <input type="checkbox" class="check_box" id="check_box1"><label for="check_box1">Remember Password</label>
+                    </div>
+                    <button type="submit" class="Login_Btn main_btn">Log In</button>
+                </form>
+
+                <form action="" class="input-grp register_forms">
+                    <input type="text" class="input_field" name="username" placeholder="User Name" required>
+                    <input type="text" class="input_field" name="email" placeholder="Email ID" required>
+                    <input type="password" class="input_field" name="password" placeholder="Enter Password" required>
+
+                    <div class="input_wrapper">
+                        <input type="checkbox" class="check_box" id="check_box2"><label for="check_box2">I agree to the Terms and
+                            Conditions</label>
+                    </div>
+                    <button type="submit" class="Login_Btn main_btn">Register</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        let button_bg = document.querySelector(".button_bg");
+        let login_forms = document.querySelector(".login_forms");
+        let register_forms = document.querySelector(".register_forms");
+
+        function toRegister() {
+            button_bg.style.left = "50%";
+            login_forms.style.left = "110%";
+            register_forms.style.left = "0%";
+        }
+        function toLogin() {
+            button_bg.style.left = "0%";
+            login_forms.style.left = "0%";
+            register_forms.style.left = "110%";
+        }
+
+    </script>
+</body>
+
+</html>
